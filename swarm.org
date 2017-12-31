@@ -48,5 +48,12 @@ $ docker service create --name dns-cache \
  
  * Ansible Puppet Chef
  
+ * Deploy to swarm
+ https://docs.docker.com/engine/reference/commandline/stack_deploy/
+ ** Specfic nodes to deplay
+ https://docs.docker.com/engine/reference/commandline/service_create/#specify-service-constraints-constraint
+ node.labels.zuul=true
+ node.labels.boss=true
+ 
  
 
