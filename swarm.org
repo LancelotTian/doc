@@ -51,6 +51,10 @@ $ docker service create --name dns-cache \
  * Deploy to swarm
  https://docs.docker.com/engine/reference/commandline/stack_deploy/
  ** Specfic nodes to deplay
+ *** Add labels for node
+ https://docs.docker.com/engine/swarm/manage-nodes/#add-or-remove-label-metadata
+  docker node update --label-add foo --label-add bar=baz node-1
+ *** Use label  
  https://docs.docker.com/engine/reference/commandline/service_create/#specify-service-constraints-constraint
  node.labels.zuul=true
  node.labels.boss=true
