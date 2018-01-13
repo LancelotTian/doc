@@ -1,0 +1,2 @@
+* sudo方式打开文件
+C-x C-f /sudo::/path/to/file
