@@ -37,3 +37,15 @@ wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz
 ===参考
 
 https://searchcode.com/codesearch/view/65562479/ 
+
+
+https://www.maxmind.com/zh/geoip2-databases
+
+  ./configure --prefix=/usr/local/openresty/luajit/ --with-lua=/usr/local/openresty/luajit/ --lua-suffix=jit --with-lua-include=/usr/local/openresty/luajit/include/luajit-2.1
+  make build
+  sudo make install
+  sudo ln -s /usr/local/openresty/luajit/bin/luarocks /usr/local/bin/luarocks
+  sudo luarocks install lua-geoip
+  sudo apt-get install libgeoip-dev
+  sudo luarocks install lua-geoip
+
