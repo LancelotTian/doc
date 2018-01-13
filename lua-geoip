@@ -1,43 +1,6 @@
-openresty 安装luarocks( yum install geoip-devel)
 
-cd /usr/local/src/
-
-wget http://luarocks.org/releases/luarocks-2.2.0.tar.gz
-
-tar -xzvf luarocks-2.2.0.tar.gz
-
-cd luarocks-2.2.0/
-
-./configure --prefix=/data/openresty/luajit \
-
---with-lua=/data/openresty/luajit/ \
-
---lua-suffix=jit-2.1.0-beta1 \
-
---with-lua-include=/data/openresty/luajit/include/luajit-2.1
-
-make build
-
-make install
-
-ln -s /data/openresty/luajit/bin/luajit-2.1.0-beta1 /usr/bin/lua
-
-ln -s /data/openresty/luajit/bin/luarocks /usr/bin/luarocks
-
-luarocks
-
-luarocks install lua-geoip
-
-=========================
-
-wget http://www.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz
-
-wget http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz
-
-===参考
-
-https://searchcode.com/codesearch/view/65562479/ 
-
+http://geoip.luaforge.net/
+http://nginx.org/en/docs/http/ngx_http_geoip_module.html
 
 https://www.maxmind.com/zh/geoip2-databases
 
@@ -49,3 +12,4 @@ https://www.maxmind.com/zh/geoip2-databases
   sudo apt-get install libgeoip-dev
   sudo luarocks install lua-geoip
 
+http://blog.csdn.net/twangjie/article/details/70677187
